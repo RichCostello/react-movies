@@ -22,9 +22,7 @@ class Movies extends Component {
 		if (!this.props.top10) {
 			return (
 				<div>
-				<Grid padded='true'  centered='true'>
 					<SearchForm search='movies'/>
-					</Grid>
 				</div>
 			);
 		}
@@ -46,7 +44,7 @@ class Movies extends Component {
 			<div>
 				<SearchForm search='movies'/>
 				<div className='row movies-border'>
-				 <Grid divided='vertically' textAlign='left'>
+				 <Grid divided='vertically' centered="true">
 					{this.props.movies.results.slice(0, 4).map(this.renderMovies)}
 				</Grid>
 				</div>
