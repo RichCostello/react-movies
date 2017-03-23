@@ -22,7 +22,9 @@ class Movies extends Component {
 		if (!this.props.top10) {
 			return (
 				<div>
+				<Grid padded='true'  centered='true'>
 					<SearchForm search='movies'/>
+					</Grid>
 				</div>
 			);
 		}
