@@ -1,0 +1,25 @@
+{
+  "name": "React-movies",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^0.14.3",
+    "react-autosuggest": "^8.0.0",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.0",
+    "react-router": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3",
+    "semantic-ui-react": "^0.67.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

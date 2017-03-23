@@ -1,0 +1,27 @@
+.active {
+	font-weight: bold;
+}
+.form-control {
+	width: 97% !important;
+	margin: 15px auto !important;
+}
+.movie {
+	text-align: center;
+	
+	
+	margin: 15px;
+	padding: 15px;
+}
+
+img {
+	margin-top: 5px;
+	max-height: 150px;
+	margin-bottom: 5px;
+}
+.header {
+	margin-top: 10px;
+}
+
+.card-a{
+	margin:15px 0;
+}
