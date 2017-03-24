@@ -10,6 +10,7 @@ import { Image, Label, Segment } from 'semantic-ui-react'
 class SelectedMovie extends Component {
 	constructor(props) {
 		super(props);
+		
 	}
 	componentWillUnmount() {
 		// dispatch actiona da foundmovie stavi ko null bugfix 
