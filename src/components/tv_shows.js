@@ -28,7 +28,7 @@ class TvShows extends Component {
 		return (
 			<div>
 				<SearchForm />
-				<Grid padded='true'  centered='true'>
+				<Grid padded={true}  centered={true}>
 					{this.props.top10Series.results.slice(0, 10).map(this.top10Shows)}
 				</Grid>
 			</div>
@@ -38,7 +38,7 @@ class TvShows extends Component {
 			<div>
 				<SearchForm />
 				<div className='row movies-border'>
-				<Grid padded='true'  centered='true'>
+				<Grid padded={true}  centered={true}>
 					{this.props.series.results.slice(0, 4).map(this.foundSeries)}
 				</Grid>	
 				</div>

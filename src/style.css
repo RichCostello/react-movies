@@ -22,6 +22,8 @@ img {
 
 .card-a{
 	margin:15px 0;
+      animation: ItemIn 3s 1 ease forwards;
+      opacity: 0;
 }
 
 /* loading gif styles */
@@ -42,4 +44,19 @@ img {
 #loading-image {
   display:block;
   margin: 25% auto;
+}
+
+/* css animations */
+
+
+@keyframes ItemIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

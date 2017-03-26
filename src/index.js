@@ -5,11 +5,13 @@ import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import ReduxPromise from 'redux-promise';
 
+
 import App from './components/app';
 import Movies from './components/movies';
 import TvShows from './components/tv_shows';
 import reducers from './reducers';
 import SelectedItem from './components/selected_item';
+
 
 import './style.css';
 
@@ -19,6 +21,7 @@ ReactDOM.render(
 <Provider store={createStoreWithMiddleware(reducers)}>
   <Router history={browserHistory}>
   <Route path='/' component={App}>
+
     <IndexRoute component={Movies}/>
         <Route path='movies/:id' component={SelectedItem}/>
         <Route path='tvshows' component={TvShows}/>
@@ -26,5 +29,7 @@ ReactDOM.render(
       </Route>
  </Router> 
 </Provider>
+
+
   ,document.getElementById('root')
 );

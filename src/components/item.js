@@ -3,7 +3,9 @@ import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { findMovieById, findSerieById } from '../actions/index';
-import { Card, Icon, Grid } from 'semantic-ui-react'
+import { Card} from 'semantic-ui-react';
+
+
 
  class Item extends Component {
  	findMovie(event) {
@@ -21,6 +23,7 @@ import { Card, Icon, Grid } from 'semantic-ui-react'
 				</div>
 				)
 			return (
+		
 				<div className='card-a'>
 				<Link onClick={this.findMovie.bind(this)} to={url}>
 				<Card 
