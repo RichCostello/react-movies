@@ -22,7 +22,7 @@ img {
 
 .card-a{
 	margin:15px 0;
-      animation: ItemIn 3s 1 ease forwards;
+      animation: ItemIn 1s 1 ease forwards;
       opacity: 0;
 }
 
