@@ -8,6 +8,11 @@ import { Image, Label, Segment } from 'semantic-ui-react'
 
 
 class SelectedMovie extends Component {
+
+	addDefaultSrc(ev){
+ 	 ev.target.src = 'https://placehold.it/150x150'
+	}
+
 	constructor(props) {
 		super(props);
 		
@@ -28,7 +33,7 @@ class SelectedMovie extends Component {
 			return (
 				<div className='col-md-6 col-md-offset-3'>
 				  <Segment raised>
-					       <Image src={`https://image.tmdb.org/t/p/w500_and_h500_bestv2/${this.props.foundMovie.poster_path}`}  height='600' />
+					       <Image onError={this.addDefaultSrc} src={`https://image.tmdb.org/t/p/w500_and_h500_bestv2/${this.props.foundMovie.poster_path}`}  height='600' />
 					
 						<h4>{this.props.foundMovie.title}</h4>
 						<p>  <Label color='green' ribbon>Overview</Label>{this.props.foundMovie.overview}</p>
@@ -46,7 +51,7 @@ class SelectedMovie extends Component {
 		return (
 			<div className='col-md-6 col-md-offset-3'>
 					  <Segment raised>
-					<img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.props.foundSerie.poster_path}`}/>
+					<img onError={this.addDefaultSrc} src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.props.foundSerie.poster_path}`}/>
 					<h4>{this.props.foundSerie.name}</h4>
 					<p>  <Label color='green' ribbon>Overview</Label>{this.props.foundSerie.overview}</p>
 						<Label color='green' ribbon>Seasons</Label> {this.props.foundSerie.seasons.map((seas, i) =><ul><li key={i}>Season {seas.season_number} -Air Date {seas.air_date}</li></ul>)}

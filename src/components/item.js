@@ -8,6 +8,11 @@ import { Card} from 'semantic-ui-react';
 
 
  class Item extends Component {
+
+ 	addDefaultSrc(ev){
+ 	 ev.target.src = 'https://placehold.it/150x150'
+	}
+
  	findMovie(event) {
  		this.props.findMovieById(this.props.item.id);
  	}
@@ -18,8 +23,10 @@ import { Card} from 'semantic-ui-react';
 		if(this.props.FILM) {
 			const url = `/movies/${this.props.item.id}`;
 			const imgmov = (
+				
+
 				<div className='movie'>
-				<img src={`https://image.tmdb.org/t/p/w300_and_h300_bestv2/${this.props.item.poster_path}`}/>
+				<img onError={this.addDefaultSrc} src={`https://image.tmdb.org/t/p/w300_and_h300_bestv2/${this.props.item.poster_path}`}  onerror="this.style.display='none';" />
 				</div>
 				)
 			return (
@@ -38,7 +45,7 @@ import { Card} from 'semantic-ui-react';
 			const url = `/tvshows/${this.props.item.id}`;
 			const imgtv = (
 				<div className='movie'>
-				<img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.props.item.poster_path}`}/>
+				<img  onError={this.addDefaultSrc} src={`https://image.tmdb.org/t/p/w300_and_h300_bestv2/${this.props.item.poster_path}`}/>
 				</div>
 				)
 			return (
