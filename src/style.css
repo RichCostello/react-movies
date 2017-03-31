@@ -1,3 +1,8 @@
+html, body {
+            height: auto;
+            overflow-y: scroll;
+          }
+
 .active {
 	font-weight: bold;
 }

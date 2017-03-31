@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {searchMovie, top10Movies, top10Series, searchSeries} from '../actions/index';
+import Autosuggest from 'react-autosuggest';
+
+const getSuggestions = value => {
+
+};
 
 class Form extends Component {
 	constructor(props) {
 		super(props);
 
 
-		this.state = ({ searchTerm: '' });
+		this.state = { searchTerm: '' };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 
